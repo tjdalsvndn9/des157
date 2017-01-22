@@ -427,6 +427,7 @@ background-image:url('vegas.png');
             seetheAnswer(){
                 this.seeAnswer = this.answerRight;
                 var vm = this;
+              this.correction = 'Check the answer';
                 setTimeout(function(){
                    vm.seeAnswer = "Give up";
                      var generateQuestion = vm.randomQuestion();
