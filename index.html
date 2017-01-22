@@ -354,7 +354,7 @@ background-image:url('vegas.png');
                 answers:{
                 answer:''
                 },
-                correction:'Check the answer',
+                correction:'Submit',
                 point:5,
                 seeAnswer:'Give up',
                 answerRight:'',
@@ -411,7 +411,7 @@ background-image:url('vegas.png');
                      this.questions.splice(generateQuestion,1);
 
                    this.answers.answer = '';
-                   this.correction = 'Check the answer';
+                   this.correction = 'Submit';
 
                 }
 
@@ -419,7 +419,7 @@ background-image:url('vegas.png');
                      this.correction = 'Wrong, Do it again';
                     var vm = this;
                   setTimeout(function(){
-                    vm.correction = 'Check the answer again';
+                    vm.correction = 'Submit again';
                   
                   },900);
                      this.point-=1; 
@@ -428,7 +428,7 @@ background-image:url('vegas.png');
             seetheAnswer(){
                 this.seeAnswer = this.answerRight;
                 var vm = this;
-              this.correction = 'Check the answer';
+              this.correction = 'Submit';
                 setTimeout(function(){
                    vm.seeAnswer = "Give up";
                      var generateQuestion = vm.randomQuestion();
@@ -436,7 +436,7 @@ background-image:url('vegas.png');
                     vm.answerRight = vm.questions[generateQuestion].answer;
                          vm.questions.splice(generateQuestion,1);
                      vm.questions.splice(generateQuestion,1);
-                     vm.correction = 'Check the answer';
+                     vm.correction = 'Submit';
                      vm.answers.answer = '';
                      vm.point -=1;
 
