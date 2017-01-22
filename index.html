@@ -417,6 +417,11 @@ background-image:url('vegas.png');
 
                 else{
                      this.correction = 'Wrong, Do it again';
+                    var vm = this;
+                  setTimeout(function(){
+                    vm.correction = 'Check the answer again';
+                  
+                  },900);
                      this.point-=1; 
                 }
             },
