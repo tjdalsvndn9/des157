@@ -424,6 +424,12 @@ background-image:url('vegas.png');
                   
                   },900);
                      this.point-=1; 
+                  if(this.point < 2){
+                       this.showQuestions.question = false;
+                       this.failIt = true;
+
+
+                }
                 }
             },
             seetheAnswer(){
