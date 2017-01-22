@@ -354,9 +354,9 @@ background-image:url('vegas.png');
                 answers:{
                 answer:''
                 },
-                correction:'next',
+                correction:'Check the answer',
                 point:5,
-                seeAnswer:'see the answer',
+                seeAnswer:'Give up',
                 answerRight:'',
                 fail:'you failed it so hard',
                 failIt:false
@@ -411,7 +411,7 @@ background-image:url('vegas.png');
                      this.questions.splice(generateQuestion,1);
 
                    this.answers.answer = '';
-                   this.correction = 'next';
+                   this.correction = 'Check the answer';
 
                 }
 
@@ -428,7 +428,7 @@ background-image:url('vegas.png');
                 this.seeAnswer = this.answerRight;
                 var vm = this;
                 setTimeout(function(){
-                   vm.seeAnswer = "see the answer";
+                   vm.seeAnswer = "Give up";
                      var generateQuestion = vm.randomQuestion();
                     vm.Problem = vm.questions[generateQuestion].question;
                     vm.answerRight = vm.questions[generateQuestion].answer;
