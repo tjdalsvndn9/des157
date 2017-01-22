@@ -1,68 +1,90 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<title>Studio 1</title>
-			<meta http-equiv="refresh" content="100">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" type="text/css" href="main.css">
-		</head>
-		<body>
-     <!-- header for title -->
-      <header>
-        <h1><span class="title">Sung's 157</span> without Bootstrap and Angular :(</h1>
-          
-           <!-- banner -->
-        <div id="banner">
-    <!--           <div id="canvas-container"></div> -->
-        </div>
-      </header>  
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MATHROBO</title>
+    <meta name="author" content="Sungmin Yi">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/dist/favicon.png">
+    <script src="https://use.fontawesome.com/4a70fc6be2.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/dist/animate.css">
+    <style>
 
-      <!-- section -->
-      <section id="columns">
-            <div id="exercise">
-              <nav>
-                <h2>Exercises</h2>
-                <ul>
-                  <li><a href="#">Functions 1 | 2</a></li>
-                </ul>
-              </nav>
-            </div>
-             <div id="studio"> 
-              <nav>
-              <h2>Studios</h2>
-                <ul>
-                  <li><a href="blog/index.html">Blah blah blah(blog)</a></li>
-                  <li><a href="#">Mad Libs 2.0</a></li>
-                  <li><a href="#">Pocket full of interface</a></li>
-                  <li><a href="#">Time is on my side</a></li>
-                  <li><a href="#">The library</a></li>
-                </ul>
-              </nav>
-            </div>
-          <div id="project">
-            <nav>
-              <h2>Projects</h2>
-              <ul>
-                <li><a href="#">Topic brainstorm</a></li>
-                <li><a href="#">Topic choice</a></li>
-                <li><a href="#">Background research</a></li>
-                <li><a href="#">ISEA proposal</a></li>
-                <li><a href="#">Comparative analysis</a></li>
-                <li><a href="#">Needfinding</a></li>
-                <li><a href="#">Brainstorm, visual research</a></li>
-              </ul>
-            </nav>
-          </div>
-        </section> 
+      @font-face{
+        font-family: 'Bodoque';
+        src: url('/dist/Bodoque.ttf');
+      }
+      @font-face{
+        font-family: 'cubic';
+        src: url('/dist/somatic.otf');
+      }
+      *{
+        margin:0;
+        padding:0;
+      }
+    </style>
+  </head>
+  <body onload="setBackground()">
+    <div id="app"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/dist/build.js"></script>
+    <script>
+      function setBackground()
+      {
+         window.setTimeout('setBackground()',5000);
 
-        <!-- footer -->
-        <footer>
-        <a href="mailto:ssuyi@ucdavis.edu?Subject=Hello%20again">Email</a>
-        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
-        </footer>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.9/p5.min.js"></script>
-       <script type="text/javascript" src="script.js"></script>
-		</body>
-	</html>
+         var color = Math.floor(Math.random() * 9 + 1);
+         var colorChoice = 'F08080';
+          if(color == 0){
+              colorChoice = 'F08080';
+          }
+          if(color == 1 ){
+
+              colorChoice = 'FFB6C1';
+          }
+          if(color == 2 ){
+
+              colorChoice = '2E8B57';
+          }
+          if(color == 3 ){
+
+              colorChoice = 'BC8F8F';
+          }
+          if(color == 4 ){
+
+              colorChoice = 'FF69B4';
+          }
+          if(color == 5 ){
+
+              colorChoice = '7B68EE';
+          }
+          if(color == 6 ){
+
+              colorChoice = '6495ED';
+          }
+          if(color == 7 ){
+
+              colorChoice = '20B2AA';
+          }
+          if(color == 8 ){
+
+              colorChoice = 'DEB887';
+          }
+          if(color == 9 ){
+
+              colorChoice = '4682B4';
+          }
+
+
+          document.getElementsByTagName("body")[0].style.backgroundColor = "#" + colorChoice;
+          document.getElementsByTagName("body")[0].style.transition ="background-color 0.5s ease";
+
+      }
+
+
+    </script>
+
+  </body>
+</html>

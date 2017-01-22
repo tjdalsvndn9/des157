@@ -1,0 +1,354 @@
+<template>
+    <div>
+        <!--beginner-->
+        <div class="col-md-12 text-center beginnerPanel" v-if="BeginnerPanel">
+            <div class="panel panel-default panel-level-test">
+                <h2 class="text-center">We have 14 Math Questions for you</h2>
+                <button type="button" class="btn btn-default level-button beginnerButton" v-for="x in buttons" @click="ShowQuestion">{{x}}</button>
+                <h2 class="text-center"><a href="#" @click="backtoLevel">Go back</a></h2>
+            </div>
+        </div>
+        <!--question-->
+        <div class="col-md-12 text-center beginnerPanel" v-if="showQuestions.question">
+            <div class="panel panel-default panel-level-test">
+                <h2 class="text-center"><span class="numbers">Question</span></h2>
+                <h3>{{Problem}}</h3>
+                <input type="text" class="answer" v-model="answers.answer">
+                <h2 class="text-center"><a href="#" @click="nextQ">{{correction}}</a></h2>
+                <h3 class="point"> Your remaining life is {{point}}</h3>
+                <button class="btn btn-default level-button beginnerButton" @click="backtoPanel">Back to panel</button>
+                <button class="btn btn-default level-button beginnerButton" @click="seetheAnswer">{{seeAnswer}}</button>
+            </div>
+        </div>
+        <div class="col-md-12 text-center beginnerPanel" v-if="failIt">
+            <div class="panel panel-default panel-level-test">
+                <h3 class="fail">{{fail}}</h3>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+.login{
+ margin-top:12%;
+
+ }
+
+.panel{
+width:80%;
+height:400px;
+padding:20px 0;
+margin:0 auto;
+border:none !important;
+background:transparent;
+}
+.panel-body{
+margin-top:8.5%;
+}
+.homepagePanel{
+margin-top:-1% !important;
+}
+.logoRobo{
+width:20%;
+margin:0 auto;
+display:block;
+margin-bottom:19px !important;
+}
+#username{
+width:30%;
+height:40px;
+margin:0 auto;
+border-radius:20px;
+background-color:rgba(255,255,255,0.7);
+
+}
+h1{
+margin-bottom:20px;
+font-family:'Bodoque';
+font-weight:900;
+font-size:40px;
+color:black;
+}
+
+.btn{
+border-radius:30px;
+width:15%;
+background-color:rgba(255,255,255,0.7);
+border:none;
+color:black;
+font-family:cubic;
+-webkit-transition: width 1s; /* Safari */
+-ms-transition: width 1s; /* Safari */
+  transition: width 1s;
+  margin-top:2%;
+  padding:10px;
+}
+.red{
+color:red;
+}
+
+.btn:hover{
+width:25%;
+background-color:hsl(0, 100%, 70%);
+color:white;
+
+}
+
+
+
+
+.level{
+ margin-top:12%;
+
+ }
+.panel-level-test{
+background-color:rgba(255,255,255,0.6);
+border-radius:20px;
+}
+#usernameColor{
+color:blue;
+font-size:50px;
+}
+.level h2{
+font-family:cubic;
+}
+.level ul{
+list-style:none;
+display:flex;
+display:-webkit-flex;
+display:-ms-flex;
+margin:0;
+padding:0;
+
+}
+.level ul li{
+margin:0;
+padding:0;
+flex:1;
+-webkit-flex:1;
+-ms-flex:1;
+padding:0 30px;
+}
+.level-button{
+background-color:white;
+margin-top:9%;
+width:120px;
+}
+.level-button:hover{
+width:180px;
+}
+
+
+
+
+.beginnerPanel{
+margin-top:12%
+}
+.beginnerPanel .panel{
+height:100%;
+}
+.beginnerButton{
+margin:0 auto !important;
+width:150px;
+margin:10px !important;
+margin-top:30px !important;
+}
+.beginnerButton:hover{
+width:150px;
+}
+.beginnerPanel h2{
+font-family:cubic;
+}
+.beginnerPanel a{
+text-decoration:none;
+
+font-size:20px;
+transition:linear 0.4s;
+}
+
+.beginnerPanel a:hover{
+font-size:30px;
+}
+.beginnerPanel h3{
+width:85%;
+margin:0 auto;
+margin-bottom: 4% !important;
+margin-top: 4% !important;
+line-height:35px;
+}
+.beginnerPanel .answer{
+width:30%;
+height:40px;
+margin:0 auto;
+border-radius:20px;
+background-color:rgba(255,255,255,0.7);
+}
+.numbers{
+color:red;
+}
+.point{
+color:red;
+font-size:30px;
+font-family:cubic;
+}
+.fail{
+color:red;
+font-size:40px;
+font-family:cubic;
+}
+
+</style>
+<script>
+
+    export default{
+        props:['primaryApp'],
+        data(){
+            return{
+          BeginnerPanel:false,
+                buttons:['1-0','1-1','1-2','1-3','1-4','1-5','1-6','1-7','1-8','1-9','1-10','1-11','1-12','1-13',
+                '1-14'
+                ],
+                Problem:'',
+                questions:[
+                 {
+                    question:'There are 123 boxes of sweets in a store. There are 25 sweets in each box. How many sweets are in the store? (type number)',
+                    answer:3075
+                   },
+                      {question:'Jim drove 768 miles of a 1200 miles journey. How many more miles does he need to drive to finish his journey?(type number)',
+
+
+                   answer:432
+
+                   },
+                      {question:'There are 365 days in one year, and 100 years in one century. How many days are in one century?(type number)',
+
+                   answer:36500
+
+                   },
+                   {question:'A factory produces 5500 toys per week. If the workers at this factory work 4 days a week and if these workers make the same number of toys everyday, how many toys are produced each day?(type number)',
+
+                    answer:1375
+
+
+                   },
+                   {question:'How many digits are in the number 1002004?',
+                   answer:7
+                   },
+                   {question:'345 + 289 =(type number)',
+                   answer:634
+                   },
+                   {
+                    question:'If you add 1000 to 29898, you obtain',
+                    answer:30898
+                   },
+                    {
+                    question:'123,686 x 0 =',
+                    answer:0
+                   },
+                   {
+                    question:'23 x 15 =',
+                    answer:345
+                   },
+                   {
+                     question:'30 - 12÷3×2 =',
+                     answer:22
+                   },
+                   {
+                     question:'Solve the equation: -5x + 20 = 25',
+                     answer:-1
+                   },
+                    {
+                     question:'Solve the equation: -0.25x + 1.3 = -0.55x - 0.2',
+                     answer:-5
+                   },
+                   {
+                    question:'Solve the inequality: -3x + 4 &lt; -8',
+                    answer: 'x>4'
+                   }
+                ],
+                showQuestions:{
+                question:false
+                },
+                answers:{
+                answer:''
+                },
+                correction:'next',
+                point:5,
+                seeAnswer:'see the answer',
+                answerRight:'',
+                fail:'You failed so hard',
+                failIt:false
+            };
+         },
+         methods:{
+            backtoPanel(){
+                     this.showQuestions.question = false;
+                this.BeginnerPanel = true;
+
+            },
+            firstQuestion(){
+                this.BeginnerPanel = false;
+                this.showQuestions.question = true;
+            },
+            ShowQuestion(){
+            this.BeginnerPanel = false;
+            this.showQuestions.question = true;
+            var random = this.randomQuestion();
+            this.Problem = this.questions[random].question;
+            this.answerRight = this.questions[random].answer;
+
+
+            },
+            nextQ(){
+                if( this.answers.answer == this.answerRight){
+                    var generateQuestion = this.randomQuestion();
+                    this.Problem = this.questions[generateQuestion].question;
+                    this.answerRight = this.questions[generateQuestion].answer;
+                    this.questions.splice(generateQuestion,1);
+                     this.questions.splice(generateQuestion,1);
+
+                   this.answers.answer = '';
+                   this.correction = 'next';
+
+                }
+
+                else{
+                     this.correction = 'Wrong, Do it again';
+                       var vm = this;
+                    setTimeout(function(){
+                    vm.correction="Hope you make it this time";
+                    },3000);
+
+                }
+            },
+            seetheAnswer(){
+                this.seeAnswer = this.answerRight;
+                var vm = this;
+                setTimeout(function(){
+                   vm.seeAnswer = "see the answer";
+                     var generateQuestion = vm.randomQuestion();
+                    vm.Problem = vm.questions[generateQuestion].question;
+                    vm.answerRight = vm.questions[generateQuestion].answer;
+                         vm.questions.splice(generateQuestion,1);
+                     vm.questions.splice(generateQuestion,1);
+                     vm.correction = 'next';
+                     vm.point -=1;
+
+                },1200);
+
+                if(this.point < 2){
+                       this.showQuestions.question = false;
+                       this.failIt = true;
+
+
+                }
+            },
+           randomQuestion(){
+           return Math.floor(Math.random() *  this.questions.length);
+
+           }
+
+
+         }
+
+    }
+</script>
