@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Ch3</title>
+			<meta http-equiv="refresh" content="100">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+			<style>
+			footer{
+	width:100%;
+	text-align:center;
+	margin-top:5%;
+	background-color:lightblue;
+	padding:20px;
+}
+
+footer a{
+
+	text-decoration:none;
+	color:white;
+	margin-right:3px;
+transition:all 1s ease;
+text-align:center;
+}
+footer a:hover{
+	color:green;
+}
+
+			</style>
+		</head>
+		<body>
+    <h1>Chapter 3: minimum exercise</h1>
+    <h3>open the Javascript console to check</h3>
+
+     
+        <footer>
+        <a href="mailto:ssuyi@ucdavis.edu?Subject=Hello%20again">Email</a>
+        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+        </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.9/p5.min.js"></script>
+        <script>
+        
+        function findMinimum(a,b){
+        	if(a < b){
+
+        		console.log(a);
+        	}
+       
+        	else if(a >b){
+        	console.log(b);
+        	}
+
+        	
+        };
+
+        findMinimum(2,3);
+        findMinimum(100,-10);
+        
+
+             function findMinimumInteger(a,b){
+        	if(a < b){
+
+        		console.log(a);
+        	}
+        	if(a && b % 0 != 0){
+        		console.log("type integer");
+        	}
+        	else if(a >b){
+        	console.log(b);
+        	}
+
+        	
+        };
+          findMinimumInteger("ddd","ddd");
+
+
+        </script>
+    
+		</body>
+	</html>
