@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
-			<title>Ch2</title>
+			<title>Ch13</title>
 			<meta http-equiv="refresh" content="100">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -12,6 +12,8 @@
 	margin-top:5%;
 	background-color:lightblue;
 	padding:20px;
+    position:fixed;
+    bottom:0;
 }
 
 footer a{
@@ -25,14 +27,15 @@ text-align:center;
 footer a:hover{
 	color:green;
 }
+img{
+    position:absolute;
+}
 
 			</style>
 		</head>
 		<body>
-    <h1>Chapter 2: looping exercise</h1>
-    <h3>open the Javascript console to check</h3>
-    <button onclick="ch2Function()">Click me</button>
-
+        <img id="cat" src="img/cat.jpg" alt="cat">
+        <img id="hat" src="img/hat.jpg" alt="hat">
      
         <footer>
         <a href="mailto:ssuyi@ucdavis.edu?Subject=Hello%20again">Email</a>
@@ -40,25 +43,28 @@ footer a:hover{
         <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
         </footer>
         
-      
-        <script>
-		var n = '#';
-        function ch2Function(){
-        	for(var i = 0; i<7; i++){
-        		
-        		n+= '#';
-        		
-
-        	
-
-        		console.log(n);
-
-
-        	}
         
-        } 
+        <script>
+        
+var cat = document.querySelector("#cat");
+var hat = document.querySelector("#hat");
+var angle = 0, pastTime = null;
+var middle = {x: 200, y:10};
+var startAngle = Math.PI;
 
-       
+
+function animate(time) {
+if (pastTime != null)
+angle += (time - pastTime) * 0.001;
+pastTime = time;
+
+cat.style.top = (Math.sin(angle) * 20 + middle.y) + "px";
+cat.style.left = (Math.cos(angle) * 200 + middle.x) + "px";
+hat.style.top = (Math.sin(startAngle+angle) * 20 + middle.y) + "px";
+hat.style.left = (Math.cos(startAngle+angle) * 200 + middle.x) + "px";
+requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
         </script>
     
 		</body>
