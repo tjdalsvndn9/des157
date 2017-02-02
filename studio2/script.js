@@ -111,12 +111,6 @@ function changeColor(){
 
 }
 
-function playGame(event){
-  event.preventDefault();
-document.getElementById('result').style.display='none';
-  document.getElementById('game').style.display="block";
-
-}
 
 
 
