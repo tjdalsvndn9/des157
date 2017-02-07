@@ -36,12 +36,12 @@ secondFile.addEventListener('click',function(){
 thirdFile.addEventListener('click',function(){
 
 	document.getElementById("thirdFile_des").style.display = 'inline-block';
-	window.open('','_parent');
+	window.open('VueList/index.html','_parent');
 });
 fourthFile.addEventListener('click',function(){
 
 	document.getElementById("fourthFile_des").style.display = 'inline-block';
-	window.open('','_parent');
+	window.open('brand.png','_parent');
 });
 
 
