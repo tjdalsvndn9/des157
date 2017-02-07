@@ -7,6 +7,11 @@ var songResult = document.getElementById('songResult');
 var colorResult = document.getElementById('colorResult');
 var celebrityResult = document.getElementById('celebrityResult');
 
+
+document.getElementById('btn').onclick= submitForm(event);
+document.getElementById('mute').onclick = muteThis(event);
+document.getElementById('reset').onclick = reset(event);
+
 function submitForm(event) {
   event.preventDefault();
   var name = document.getElementById('name').value;
@@ -49,6 +54,9 @@ function muteThis(event) {
 }
 var vm = this;
 var header = document.getElementById('header');
+
+
+window.onload = changeColor();
 
 function changeColor() {
   setTimeout('changeColor()', 3000)

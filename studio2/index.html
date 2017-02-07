@@ -5,9 +5,9 @@
 	<title>MadLib</title>
 	<link href="style.css" rel="stylesheet">
 </head>
-<body onload="changeColor()">
+<body>
 	<!-- https://www.youtube.com/watch?v=LoHKgj0zsTY -->
-	 <video autoplay="" class="video" height="150" loop="" width="300"><source src="img/logic.mp4" type="video/mp4"></video> <!-- input content -->
+	 <video autoplay class="video" ><source src="img/logic.mp4" type="video/mp4"></video> <!-- input content -->
 	<div id="container">
 		<form id="form" name="form">
 			<section id="content">
@@ -15,16 +15,13 @@
 				<input class="input" id="name" placeholder="favorite game" type="text">
 				<input class="input" id="email" placeholder="favorite Nintendo game" type="text">
 				<input class="input" id="age" placeholder="favorite song" type="text"> 
-				<input class="input" id="gender" placeholder="favorite color" type="text">
-				<input class="input" id="profession" placeholder="favorite rapper" type="text">
+				<input class="input" id="gender" placeholder="favorite color" type="text"> 
+				<input class="input" id="profession" placeholder="favorite rapper" type="text"> 
 				<input class="input" id="song" placeholder="Super Mario Bros vs Mario Smash Bros" type="text"> 
 				<input class="input" id="color" placeholder="Pokemon vs Super Smash Bros" type="text"> 
 				<input class="input" id="celebrity" placeholder="Kirby vs Mega Man" type="text"> 
-				<input id="btn" onclick="submitForm(event)" type="submit" value="submit">
-				<input id="mute" onclick="muteThis(event)" type="submit" value="mute"> 
-				<video autoplay="" class="mario" height="150" loop="" muted>
-					<source src="img/mario.mp4" type="video/mp4">
-				</video> <!-- source https://www.youtube.com/watch?v=H13vPl6p7hY&t=1s -->
+				<input id="btn"  type="submit" value="submit"> 
+				<input id="mute" type="submit" value="mute"> 
 			</section>
 		</form>
 	</div>
@@ -37,7 +34,7 @@
 		You: <span id="songResult"></span>, Me: Super Mario Bros.<br>
 		You: <span id="colorResult"></span>, Me: Super Mario Bros(Only game I can play forever).<br>
 		<span id="celebrityResult"></span> sucks.<br>
-		<button id="reset" onclick="reset(event)">Reset</button></h4>
+		<button id="reset">Reset</button></h4>
 	</section>
 	<footer>
 		<a href="https://github.com/tjdalsvndn9" target="_blank">Github</a> <a href="mailto:ssuyi@ucdavis.edu?Subject=Hello%20again">Email</a> <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a> <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
