@@ -29,19 +29,19 @@ function firstClick(){
 secondFile.addEventListener('click',function(){
 
 	document.getElementById("secondFile_des").style.display = 'inline-block';
-	window.open('http://www.minimalixt.com/store/c1/Featured_Products.html','_parent');
+	window.open('http://www.minimalixt.com/store/c1/Featured_Products.html','_blank');
 
 });
 
 thirdFile.addEventListener('click',function(){
 
 	document.getElementById("thirdFile_des").style.display = 'inline-block';
-	window.open('VueList/index.html','_parent');
+	window.open('VueList/index.html','_blank');
 });
 fourthFile.addEventListener('click',function(){
 
 	document.getElementById("fourthFile_des").style.display = 'inline-block';
-	window.open('brand.png','_parent');
+	window.open('brand.png','_blank');
 });
 
 
