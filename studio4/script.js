@@ -35,10 +35,11 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 
 	firsttext=['hi','hello','hey','what','sure']
-	secondtext=['wanna hang','Wannna hang?','wanna hang?','yes','yeah','hell yeah','probably','maybe'];
+	secondtext=['wanna hang','Wannna hang?','wanna hang?','yes','yeah','hell yeah'];
 		thirdtext=['Davis','davis','sac'];
 		refusingText= ['no','hell no','I am not a single','im not single','nah'];
-		fourthText = ['what','what?','what do you mean?','what do you mean','what you mean', 'and?','you are married?','alright','okay']
+		fourthText = ['what','what?','what do you mean?','what do you mean','what you mean', 'and?','you are married?','alright','okay'];
+		adminText=['admin Sung','Sung'];
 
 	var button = document.getElementById('sendButton');
 
@@ -163,7 +164,7 @@ randomNumberGenerator = Math.max(2000,Math.floor(Math.random()*3500));
 				photo.setAttribute('class','user-photo');
 				var message = document.createElement('p');
 				message.setAttribute('class','chat-message');
-				friendText = document.createTextNode('My address is 1112 2nd St, Sacramento, CA 95814. I hope you make it &#x2665;');
+				friendText = document.createTextNode('My address is 1112 2nd St, Sacramento, CA 95814. I hope you make it');
 				message.appendChild(friendText);
 				var chat = document.createElement('div');
 				chat.setAttribute('class','chat');
@@ -183,6 +184,27 @@ randomNumberGenerator = Math.max(2000,Math.floor(Math.random()*3500));
 
 					}
 			}
+			for(var i=0; i<adminText.length; i++){
+	if(textArea.trim().toLowerCase() == adminText[i]){
+		setTimeout(function(){
+			var photo = document.createElement('div');
+			photo.setAttribute('class','user-photo');
+			var message = document.createElement('p');
+			message.setAttribute('class','chat-message');
+			friendText = document.createTextNode('You are the best, Sung');
+			message.appendChild(friendText);
+			var chat = document.createElement('div');
+			chat.setAttribute('class','chat');
+			chat.appendChild(photo);
+			chat.append(message);
+			document.querySelector('.chatlogs').appendChild(chat);
+
+				},randomNumberGenerator);
+
+
+
+				}
+		}
 
 
 
