@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 
 	firsttext=['hi','hello','hey','what','sure']
-	secondtext=['wanna hang','Wannna hang?','wanna hang?','yes','yeah','hell yeah'];
+	secondtext=['wanna hang','Wannna hang?','wanna hang?','yes','yeah','hell yeah','probably','maybe'];
 		thirdtext=['Davis','davis','sac'];
 		refusingText= ['no','hell no','I am not a single','im not single','nah'];
 		fourthText = ['what','what?','what do you mean?','what do you mean','what you mean', 'and?','you are married?','alright','okay']
