@@ -16,8 +16,11 @@ body {
 	background-image:url('https://media.giphy.com/media/3o6gbeVN2ZPbG2COKA/giphy.gif');
 	background-size:cover;
 	background-repeat:no-repeat;
-	display:flex;
+
 	overflow-y:none;
+}
+section{
+	display:flex;
 }
 
 
@@ -158,12 +161,13 @@ background:red;
 }
 
 footer{
+
 padding-top:20px;
 padding-bottom:20px;
 background-color:lightpink;
-position:fixed;
+text-align:center;
 width:100%;
-bottom:0;	
+
 }
 footer a{
 	color:white;
