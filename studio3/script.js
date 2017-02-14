@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(event){
+
 var firstFile = document.getElementById('firstFile');
 var secondFile = document.getElementById('secondFile');
 var thirdFile = document.getElementById('thirdFile');
@@ -29,20 +31,26 @@ function firstClick(){
 secondFile.addEventListener('click',function(){
 
 	document.getElementById("secondFile_des").style.display = 'inline-block';
-	window.open('http://www.minimalixt.com/store/c1/Featured_Products.html','_blank');
+	window.open('http://www.minimalixt.com/store/c1/Featured_Products.html','_parent');
 
 });
 
 thirdFile.addEventListener('click',function(){
 
 	document.getElementById("thirdFile_des").style.display = 'inline-block';
-	window.open('VueList/index.html','_blank');
+	window.open('VueList/index.html','_parent');
 });
 fourthFile.addEventListener('click',function(){
 
 	document.getElementById("fourthFile_des").style.display = 'inline-block';
-	window.open('brand.png','_blank');
+	window.open('brand.png','_parent');
 });
 
+
+
+
+
+
+})
 
 
