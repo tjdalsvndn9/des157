@@ -163,7 +163,7 @@ randomNumberGenerator = Math.max(2000,Math.floor(Math.random()*3500));
 				photo.setAttribute('class','user-photo');
 				var message = document.createElement('p');
 				message.setAttribute('class','chat-message');
-				friendText = document.createTextNode('My address is 1112 2nd St, Sacramento, CA 95814. I hope you make it');
+				friendText = document.createTextNode('My address is 1112 2nd St, Sacramento, CA 95814. I hope you make it &#x2665;');
 				message.appendChild(friendText);
 				var chat = document.createElement('div');
 				chat.setAttribute('class','chat');
