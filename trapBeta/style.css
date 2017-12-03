@@ -1,0 +1,267 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+
+}
+a{
+	color:black;
+	display:block;
+}
+.navbar{
+	background-color:white;
+	height:50px;
+	display: flex;
+	justify-content: flex-start;
+}
+.display-none{
+	display:none;
+}
+.subnav{
+	padding:0 2%;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	background-color:white;
+	height:50px;
+}
+.logo{
+	width:30px;
+	cursor:pointer;
+	margin-top:-3px;
+
+}
+.hamburger{
+	display:none;
+}
+
+/*left panel*/
+.left-panel{
+	border-right:2px solid #eee;
+	 overflow-y: scroll;
+	 height:100vh;
+	 vertical-align:top;
+	 float:left;
+
+
+}
+.left-panel > .left-panel-item{
+
+}
+.left-panel > .left-panel-item >.column-no-wrap{
+
+	left:1%;
+
+}
+.content{
+	 overflow-y: scroll;
+	 height:100vh;
+	 float:right;
+	  vertical-align:top;
+}
+
+/*heroic image*/
+.heroicImage{
+	display:flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin-top:calc(9% - 1px);
+}
+.heroicImage>img{
+	width:250px;
+	padding:1.2em;
+  border-radius: 16%;
+	  transition:all linear 0.4s;
+}
+.heroicImage>img:hover{
+	/*border-radius:25px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: scale(1.1)*/
+}
+.heroicImage > h3{
+	margin-top:1.5em;
+}
+.heroicImage > p{
+	margin-top:-0.5em;
+}
+/*brief documentation starts here*/
+.box{
+	background-color:#EF8D21;
+	width:100%;
+	height:70px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:1.2em;
+  color:white;
+  border-radius:5px;
+}
+.height-300{
+	height:300px;
+}
+.height-150{
+	height:150px;
+}
+.square{
+	width:80px;
+	height:80px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:1.2em;
+  color:white;
+  border-radius:5px;
+}
+
+.momogram{
+	background-color:#eee;
+	width:100%;
+	padding:5px;
+	border-radius:10px;
+}
+.momogram > *{
+	padding:0;
+	margin:0;
+}
+#designGuide p{
+	font-size:11px;
+}
+.openSansSemiBold >*{
+	font-family: 'Open Sans', sans-serif;
+font-weight:600;
+}
+textarea{
+	border:none;
+}
+textarea:focus{
+outline:none;
+}
+.left-panel-moblie{
+		display:block;
+		background-color:white;
+		left:0;
+		width:250px;
+		z-index:100;
+	}
+.left-panel-mobile-item{
+		position:fixed;
+		padding-left:2%;
+		padding-right:10%;
+		padding-top:1%;
+		height:100vh;
+		left:0;
+			z-index:100;
+			background:rgba(255,255,255,0.8);
+
+	}
+	.badge{
+		color:#212229;
+
+		border-radius: 4px;
+		font-size:14px;
+		font-weight:lighter;
+		padding: 2px 5px;
+
+	}
+	.cheatsheetRow > h6{
+		margin-top:-2%;
+	}
+	.code-title{
+		font-size:15px;
+		margin-left:5%;
+		color:black;
+		opacity:0.7;
+	}
+	.actual-code{
+		font-size:14px;
+		color:black;
+		opacity:0.9;
+		letter-spacing:1px;
+	}
+	.coding-background{
+		background-color:rgba(211,211,211,0.5);
+		padding:10px;
+		border-radius: 5px
+
+	}
+	h3{
+		font-size:19px !important;
+	}
+	.menu-content > a:hover{
+		background-color:#212229 !important;
+    color:white
+	}
+
+
+@media screen and (max-width:1200px) {
+	.padding-5{
+		padding:0 7%;
+	}
+	.left-panel{
+		display:none;
+	}
+    /*.left-panel-item{
+    	left:0;
+    	padding:5%;
+		background-color:white;
+		z-index:100;
+    }
+    .hamburger{
+    	display:block;
+    	cursor:pointer;
+    }
+    .hamburger:focus{
+    	outline:none;
+    }
+    .logo{
+    	display:none;
+    }
+    .column-no-wrap{
+     flex-direction: row;
+    }*/
+
+}
+@media screen and (max-width:1199px){
+	.navbar{
+		position:fixed;
+		z-index:99;
+	}
+	.hamburger{
+		display:block;
+		cursor:pointer;
+	}
+	.logo{
+		margin-left:20px;
+		margin-top:1.5px;
+	}
+	.subnav{
+		margin-top:2.4%;
+		position:fixed;
+		background-color:none;
+		width:100%;
+		justify-content: flex-start;
+	}
+	.subnav > a{
+		padding:0 3%;
+	}
+	img{
+		margin-top:3%;
+	}
+}
+@media screen and (min-width:1201px) {
+	.mobile-panel{
+		display:none;
+	}
+	.left-panel-mobile-item{
+		display:none;
+	}
+	.left-panel-moblie{
+		display:none;
+	}
+	.left-panel{
+		display:block;
+	}
+}

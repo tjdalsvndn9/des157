@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Naturetrak Functional Programming</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="framework.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navigation starts here -->
+   <!--  <nav class="navbar">
+        <h2><i class="fa fa-bars hamburger" aria-hidden="true"></i></h2>
+        <img src="img/hero.png" alt="heroImage" class="logo">
+    </nav>
+    <div class="mobile-panel" style="display:none;"></div>
+    <div class="top-5"></div> -->
+    <div class="row">
+        <div class="row-12">
+            <div class="row">
+                <div class="row-3 left-panel">
+                    <!-- left panel starts here -->
+                    <div class="left-panel-item">
+                        <div class="column-no-wrap">
+                            <p class="menu-title">
+                                Array
+                            </p>
+                            <ul class="menu-content">
+                                <a href="#clone">clone</a>
+                                <a href="#multiply">muliply</a>
+                                <a href="#divide">divide</a>
+                                <a href="#multiplyof">multipleOf</a>
+                                <a href="#findInteger">findInteger</a>
+                                <a href="#findStr">findStr</a>
+                                <a href="#findFunc">findFunc</a>
+                                <a href="#findObj">findObj</a>
+                                <a href="#findArr">findArr</a>
+                                <a href="#min">min</a>
+                                <a href="#max">max</a>
+                                <a href="#first">first</a>
+                                <a href="#last">last</a>
+                                <a href="#findIndex">findIndex</a>
+                                <a href="#random">random</a>
+                                <a href="except">except</a>
+                                <a href="#onlyNum">onlyNum</a>
+                                <a href="#combine">combine</a>
+                                <a href="#clean">clean</a>
+                                <a href="#union">union</a>
+                                <a href="#intersect">intersect</a>
+                                <a href="#difference">difference</a>
+                                <a href="#without">without</a>
+                                <a href="#makeObj">makeObj</a>
+                            </ul>
+                            <p class="menu-title">
+                                Object
+                            </p>
+                            <ul class="menu-content">
+                                <a href="#button">Button</a>
+                                <a href="#form">Form</a>
+                                <a href="#card">Card</a>
+                                <a href="#notification">Notification</a>
+                                <a href="#table">Table</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- left panel ends here -->
+                </div>
+                <div class="row-10 content">
+                    <!-- heroic page starts here -->
+                    <div class="row">
+                        <div class="row-12 heroicImage">
+                            <img src="img/weed.gif" alt="heroImage">
+                            <h3>Trap <span class="badge">Beta</span></h3>
+                            <p>Functional programming javascript library</p>
+                            <p>Faster than Lodash and Underscore js </p>
+                            <p>Trap 2 is coming!</p>
+                        </div>
+                    </div>
+                    <!-- heroic page ends here -->
+                    <!-- brief documentation section starts here -->
+                    <div id="clone">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array clone <span class="code-title">Array.clone()</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,2,3,5,{first:'sung'}].clone();</p>
+                                    <p class="actual-code">=> [1,2,3,5,{first:'sung'}]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="multiply">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array multiply <span class="code-title">Array.multiply()</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,2,3,4,5].multiply(2);</p>
+                                    <p class="actual-code">=> [2,4,6,8,10]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divide">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array Divide <span class="code-title">Array.divide()</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[2,4,6,8,10].divide(2);</p>
+                                    <p class="actual-code">=> [1,2,3,4,5]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="multiplyof">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array multipleOf <span class="code-title">Array.multipleOf()  -- find the multiple of x</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,2,3,4,5,6,7,8,9,10].multipleOf(5);</p>
+                                    <p class="actual-code">=> [5,10]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="findInteger">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array findInteger <span class="code-title">Array.findInteger()  -- find integer</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 'a', 'b', -1, -2, function sung() { return 'dddd' }].findInteger();
+                                    </p>
+                                    <p class="actual-code">=> [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -2]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="findStr">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array findStr <span class="code-title">Array.findStr()   -- find string</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 'a', 'b', -1, -2, function sung() { return 'dddd' }].findStr();
+                                    </p>
+                                    <p class="actual-code">=> ['a','b']</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="findFunc">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array findFunc <span class="code-title">Array.findFunc()   -- find function</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 'a', 'b', -1, -2, function sung() { return 'dddd' }].findFunc();
+                                    </p>
+                                    <p class="actual-code">=> [function sung(){}]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="findObj">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array findObj <span class="code-title">Array.findObj()   -- find object</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[3,'a',function(){},{first:'sung'}].findObj();
+                                    </p>
+                                    <p class="actual-code">=> [{first:'sung'}]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="findArr">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array findArr <span class="code-title">Array.findArr()   -- find array</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[3,'a',function(){},{first:'sung'},[1,2,3]].findArr();
+                                    </p>
+                                    <p class="actual-code">=> [[1,2,3]]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="min">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array min <span class="code-title">Array.min()   -- find a minimun value</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-2,1,2,3,4,5].min();
+                                    </p>
+                                    <p class="actual-code">=> -2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="max">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array max <span class="code-title">Array.max()   -- find a maximum value</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-1,-2,1,2,3,4,5].max();
+                                    </p>
+                                    <p class="actual-code">=> 5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="first">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array first <span class="code-title">Array.first()   -- find a first value</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-1,-2,1,2,3,4,5].first();
+                                    </p>
+                                    <p class="actual-code">=> [-1]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="last">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array last <span class="code-title">Array.last()   -- find a last value</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-1,-2,1,2,3,4,5].last();
+                                    </p>
+                                    <p class="actual-code">=> [5]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="findIndex">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array findIndex <span class="code-title">Array.findIndex()   -- find a index of value</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-1,-2,4,2,3,1,5].findIndex(4);
+                                    </p>
+                                    <p class="actual-code">=> 2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="random">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array random <span class="code-title">Array.random()   -- spit out a random value</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-1,-2,4,2,3,1,5].random();
+                                    </p>
+                                    <p class="actual-code">=> 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="except">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array except <span class="code-title">Array.except()   -- spit out value except x</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[-1,-2,4,2,3,1,5].except(5);
+                                    </p>
+                                    <p class="actual-code">=> [-1,-2,4,2,3,1]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="onlyNum">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array onlyNum <span class="code-title">Array.onlyNum()   -- spit out only number values</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,2,'a',{a:'sung'}].onlyNum();
+                                    </p>
+                                    <p class="actual-code">=> [1,2]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="combine">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array combine <span class="code-title">Array.combine()   -- combine arrays //duplicated values</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,2,3,4,5].combine([5,6,7,9]);
+                                    </p>
+                                    <p class="actual-code">=> [1,2,3,4,5,5,6,7,9]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="clean">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array clean <span class="code-title">Array.clean()   -- consolidate an array</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,1,1,22].clean());
+                                    </p>
+                                    <p class="actual-code">=> [1,22]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="union">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array union <span class="code-title">Array.union()   -- union arrays //no duplicated values</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,1,1,22].union([2,3,4]));
+                                    </p>
+                                    <p class="actual-code">=> [1,22,2,3,4]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="intersect">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array intersect <span class="code-title">Array.intersect()   -- arrayA n arrayB</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,1,1,22,2].intersect([2,3,4]));
+                                    </p>
+                                    <p class="actual-code">=> [2]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div id="difference">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array difference <span class="code-title">Array.difference()   -- !(arrayA n arrayB)</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,1,1,22,2].difference([2,3,4]));
+                                    </p>
+                                    <p class="actual-code">=> [1,22]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div id="without">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array without <span class="code-title">Array.without()   -- exclude Values</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">[1,1,1,22,2].without(1,2));
+                                    </p>
+                                    <p class="actual-code">=> [22]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="makeObj">
+                        <div class="row padding-5">
+                            <div class="row-12">
+                                <h3>Array makeObj <span class="code-title">Array.makeObj()   -- Array => Object</span></h3>
+                                <div class="coding-background">
+                                    <p class="actual-code">Array.prototype.makeObj(['first','second'],[1,2]));
+                                    </p>
+                                    <p class="actual-code">=>{'first':1,'second':2}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- element ends here -->
+                <!-- brief documentation section ends here -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+    let hamburger = document.querySelector('.hamburger');
+    var column = `
+                <div class="left-panel-moblie">
+
+                    <div class="left-panel-mobile-item">
+                    <button class="exit exitPanel"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+                   <p class="menu-title">
+                                Layout
+                            </p>
+                            <ul class="menu-content">
+                                <a href="#grid">Grid</a>
+                                <a href="#tile">Tile</a>
+                            </ul>
+                            <p class="menu-title">
+                                Elements
+                            </p>
+                            <ul class="menu-content">
+                                <a href="#button">Button</a>
+                                <a href="#form">Form</a>
+                                <a href="#card">Card</a>
+                                <a href="#notification">Notification</a>
+                                <a href="#table">Table</a>
+                            </ul>
+                            <p class="menu-title">
+                                Component
+                            </p>
+                            <ul class="menu-content">
+                                <a href="#message">Message</a>
+                                <a href="#tab">Tab</a>
+                                <a href="#panel">Panel</a>
+                                <a href="#designGuide">Design guide</a>
+                                <a href="#bootstrap">Bootstrap</a>
+                                <a href='#cheatsheet'>Cheat sheet</a>
+
+                            </ul>
+                            </div>
+                </div>
+            `
+    var mobilePanel = document.querySelector('.mobile-panel');
+    mobilePanel.insertAdjacentHTML('beforeend', column)
+
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        myFunction();
+    })
+    let exitPanel = document.querySelector('.exitPanel');
+    exitPanel.addEventListener('click', function() {
+
+
+        var x = document.querySelector('.mobile-panel');
+        var y = document.querySelector('.left-panel-moblie')
+        console.log('dd')
+        x.style.display = 'none';
+        y.style.display = 'none';
+    })
+
+
+
+    function myFunction() {
+        var x = document.querySelector('.mobile-panel');
+        var y = document.querySelector('.left-panel-moblie')
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+            y.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+    </script>
+</body>
+
+</html>
